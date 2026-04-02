@@ -1,4 +1,4 @@
-class Flipkart {
+class Mintra {
 	
  
 
@@ -7,7 +7,7 @@ class Flipkart {
     System.out.println("invoking login using userName:" + userName + " and psw:" + psw);
 
     String reguserName = "prathyush";
-    String regpsw = "prathi@123";
+    String regpsw = "prathi@111";
     boolean isLogin = false;
 	
 

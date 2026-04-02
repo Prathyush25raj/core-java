@@ -1,18 +1,36 @@
-class SwiggyRunner{
+class SwiggyRunner {
 
-public static void main(String[] args){
+  public static void main(String[] arg) {
 
-System.out.println("------First Time Method Call------");
+    Swiggy Swiggy = new Swiggy();
 
-String order1=Swiggy.validateAndOrder(9876543210L,"Burger","KFC","Bangalore","Rahul");
-System.out.println(order1);
+    boolean login = Swiggy.login("prathyush", "prathi@123");
+    System.out.println(login);
+    
+	
+	
+    String result = Swiggy.login(9353560292L, 1234);
+    System.out.println(result);
+	
+	
+    
+    String msg = Swiggy.search("tandoori");
+    System.out.println(msg);
+	
+    msg = Swiggy.search("tandoori", "chikan tandoori");
+    System.out.println(msg);
+	
+    
+    msg = Swiggy.search("tandoori", "chikan tandoori", 500);
+    System.out.println(msg);
 
-System.out.println("------Second Time Method Call------");
 
-String order2=Swiggy.validateAndOrder(9876543211L,"Pizza","PizzaHut","Mysore","Arjun");
-System.out.println(order2);
-System.out.println("------Second time method call------");
-boolean result=Swiggy.validateRegisterFields(9867643278l,"Prathyushj@1234","prathyush raj","prathyush_b");
-System.out.println(result);
-}
+    msg = Swiggy.search("tandoori", "chikan tandoori", 500, "BangloreDish");
+    System.out.println(msg);
+
+    msg = Swiggy.search("tandoori", "chikan tandoori", 500, "BangloreDish", 5);
+    System.out.println(msg);
+	
+	
+  }
 }
