@@ -1,9 +1,10 @@
-class Amazon
+class Shopsy
 {
 	public double getPriceByProduct(String product)
 	{
 		double price = 0.0;
 
+		// Standard String comparison using .equals()
 		if("Laptop".equals(product))
 			price = 50000;
 		else if("Mobile".equals(product))
@@ -21,7 +22,7 @@ class Amazon
 
 	public double getDiscount(double total)
 	{
+		// Deducts 10% from the total
 		return total - (total * 0.10);
 	}
 }
-

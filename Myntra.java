@@ -1,4 +1,4 @@
-class Amazon
+class Myntra
 {
 	public double getPriceByProduct(String product)
 	{
@@ -21,7 +21,7 @@ class Amazon
 
 	public double getDiscount(double total)
 	{
+		// Deducts 10% from the total amount
 		return total - (total * 0.10);
 	}
 }
-

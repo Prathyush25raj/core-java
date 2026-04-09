@@ -1,19 +1,16 @@
-class AmazonRunner{
+class AmazonRunner
+{
+	public static void main(String[] args)
+	{
+		Amazon a = new Amazon();
 
-public static void main(String[] args){
+		double price = a.getPriceByProduct("Mobile");
+		System.out.println("Price: " + price);
 
-System.out.println("------First Time Method Call------");
+		double total = a.getTotal(price, 2);
+		System.out.println("Total: " + total);
 
-String order1=Amazon.validateAndOrder(9876543210L,"Laptop","Bangalore","UPI","Rahul");
-System.out.println(order1);
-
-System.out.println("------Second Time Method Call------");
-
-String order2=Amazon.validateAndOrder(9876543211L,"Mobile","Mysore","Card","Arjun");
-System.out.println(order2);
-System.out.println("------Second time method call------");
-boolean result=Amazon.validateRegisterFields(9867643278l,"yogesh@1234","yogesh N","Yogesh_N");
-System.out.println(result);
-
-}
+		double discount = a.getDiscount(total);
+		System.out.println("Final Price: " + discount);
+	}
 }

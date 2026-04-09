@@ -1,36 +1,11 @@
 class SwiggyRunner {
+    public static void main(String[] args) {
+        Swiggy s = new Swiggy();
 
-  public static void main(String[] arg) {
+        double price = s.getPrice("Pizza");
+        double total = s.getTotal(price, 2);
+        double finalAmount = s.getDiscount(total);
 
-    Swiggy Swiggy = new Swiggy();
-
-    boolean login = Swiggy.login("prathyush", "prathi@123");
-    System.out.println(login);
-    
-	
-	
-    String result = Swiggy.login(9353560292L, 1234);
-    System.out.println(result);
-	
-	
-    
-    String msg = Swiggy.search("tandoori");
-    System.out.println(msg);
-	
-    msg = Swiggy.search("tandoori", "chikan tandoori");
-    System.out.println(msg);
-	
-    
-    msg = Swiggy.search("tandoori", "chikan tandoori", 500);
-    System.out.println(msg);
-
-
-    msg = Swiggy.search("tandoori", "chikan tandoori", 500, "BangloreDish");
-    System.out.println(msg);
-
-    msg = Swiggy.search("tandoori", "chikan tandoori", 500, "BangloreDish", 5);
-    System.out.println(msg);
-	
-	
-  }
+        System.out.println("Final Amount: " + finalAmount);
+    }
 }
